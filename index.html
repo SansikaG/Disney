@@ -1,163 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Site Rose Élégant</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Disneyland Paris - Le rêve rose</title>
+    <style>
+        /* Reset simple */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-    :root {
-      --rose-light: #ffe6ec;
-      --rose-medium: #f4a6ba;
-      --rose-dark: #c94c74;
-      --text-dark: #333;
-      --white: #fff;
-    }
+        body {
+            background: #ffe6f0; /* fond rose clair */
+            color: #b30059; /* rose foncé */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    body {
-      font-family: 'Raleway', sans-serif;
-      background: var(--rose-light);
-      color: var(--text-dark);
-    }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #ff3399;
+            text-shadow: 1px 1px 5px #cc0066;
+        }
 
-    header {
-      background-color: var(--rose-medium);
-      color: var(--white);
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+        header p {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #ff66b2;
+        }
 
-    header h1 {
-      font-size: 2.5rem;
-    }
+        main {
+            max-width: 700px;
+            background: #fff0f6;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(255, 51, 153, 0.2);
+        }
 
-    nav {
-      margin-top: 10px;
-    }
+        main h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #e60073;
+        }
 
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+        main p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
 
-    nav a:hover {
-      color: var(--rose-dark);
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    section h2 {
-      color: var(--rose-dark);
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    footer {
-      background: var(--rose-medium);
-      color: var(--white);
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    /* Animation au scroll */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 8px;
-      }
-    }
-  </style>
+        footer {
+            margin-top: auto;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #ff66b2;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Disneyland Paris</h1>
+        <p>Le rêve magique en rose</p>
+    </header>
 
-  <header>
-    <h1>Mon Site Rose</h1>
-    <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#apropos">À propos</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <main>
+        <h2>Bienvenue à Disneyland Paris !</h2>
+        <p>Découvrez un monde féerique où la magie prend vie. Profitez des attractions, des spectacles et rencontrez vos personnages Disney préférés dans un décor rose et enchanteur.</p>
+    </main>
 
-  <section id="accueil" class="fade-in">
-    <h2>Bienvenue</h2>
-    <p>Bienvenue sur mon site web élégant et rose. Ici, vous trouverez toutes les informations importantes sur mes services, mon parcours, et comment me contacter.</p>
-  </section>
+    <footer>
+        &copy; 2025 Disneyland Paris - Tous droits réservés
+    </footer>
+</body>
+</html>
 
-  <section id="apropos" class="fade-in">
-    <h2>À propos</h2>
-    <p>Je suis une personne passionnée par le design, le web, et la communication. Mon objectif est de créer des expériences en ligne belles, accessibles et efficaces.</p>
-  </section>
-
-  <section id="services" class="fade-in">
-    <h2>Services</h2>
-    <p>Je propose des services variés : design graphique, création de sites web, conseil en identité visuelle et accompagnement digital.</p>
-  </section>
-
-  <section id="contact" class="fade-in">
-    <h2>Contact</h2>
-    <p>Envie de collaborer ou de me poser une question ? Envoyez-moi un message à : <br><strong>contact@example.com</strong></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Mon Site Rose. Tous droits réservés.
-  </footer>
-
-  <script>
-    // Animation des sections au scroll
-    const sections = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
   </script>
     <script src="script.js"></script>
      <div>
@@ -165,5 +96,6 @@
     </div>
 </body>
 </html>
+
 
 
