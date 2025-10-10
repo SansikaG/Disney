@@ -1,37 +1,169 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Bienvenue à Disneyland</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Rose Élégant</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
+
+    :root {
+      --rose-light: #ffe6ec;
+      --rose-medium: #f4a6ba;
+      --rose-dark: #c94c74;
+      --text-dark: #333;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--rose-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--rose-medium);
+      color: var(--white);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--rose-dark);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--rose-dark);
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--rose-medium);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Animation au scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenue à Disneyland Paris !</h1>
-        <nav>
-            <a href="#">Accueil</a>
-            <a href="#">Attractions</a>
-            <a href="#">Billets</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="intro">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Disneyland_Paris_logo.svg" alt="Logo Disneyland Paris">
-            <p>Venez découvrir la magie de Disneyland Paris ! Un monde féerique vous attend avec des attractions incroyables, des spectacles magiques, et vos personnages préférés.</p>
-            <button onclick="showAlert()">Clique ici pour un message magique ✨</button>
-        </section>
-    </main>
+  <header>
+    <h1>Mon Site Rose</h1>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 Disneyland Paris. Tous droits réservés.</p>
-    </footer>
+  <section id="accueil" class="fade-in">
+    <h2>Bienvenue</h2>
+    <p>Bienvenue sur mon site web élégant et rose. Ici, vous trouverez toutes les informations importantes sur mes services, mon parcours, et comment me contacter.</p>
+  </section>
 
+  <section id="apropos" class="fade-in">
+    <h2>À propos</h2>
+    <p>Je suis une personne passionnée par le design, le web, et la communication. Mon objectif est de créer des expériences en ligne belles, accessibles et efficaces.</p>
+  </section>
+
+  <section id="services" class="fade-in">
+    <h2>Services</h2>
+    <p>Je propose des services variés : design graphique, création de sites web, conseil en identité visuelle et accompagnement digital.</p>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Envie de collaborer ou de me poser une question ? Envoyez-moi un message à : <br><strong>contact@example.com</strong></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Mon Site Rose. Tous droits réservés.
+  </footer>
+
+  <script>
+    // Animation des sections au scroll
+    const sections = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
     <script src="script.js"></script>
      <div>
     <a href="contact.html">Page de contact</a>
     </div>
 </body>
 </html>
+
 
