@@ -3,89 +3,89 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Disneyland Paris - Le rêve rose</title>
+    <title>Bienvenue à Disneyland Paris</title>
     <style>
-        /* Reset simple */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
         body {
-            background: #ffe6f0; /* fond rose clair */
-            color: #b30059; /* rose foncé */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            min-height: 100vh;
+            background-color: #f8d7e3; /* rose clair */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #4a0033;
+            margin: 0;
+            padding: 40px 20px;
         }
-
         header {
-            text-align: center;
-            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
         }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            color: #ff3399;
-            text-shadow: 1px 1px 5px #cc0066;
+        header img {
+            width: 100px; /* taille du logo */
+            height: auto;
         }
-
-        header p {
-            font-style: italic;
-            font-size: 1.2rem;
-            color: #ff66b2;
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
         }
-
-        main {
-            max-width: 700px;
-            background: #fff0f6;
-            padding: 20px 30px;
+        main img {
+            max-width: 60%; /* image plus petite */
+            height: auto;
             border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(255, 51, 153, 0.2);
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+            margin-bottom: 20px;
         }
-
-        main h2 {
-            text-align: center;
-            margin-bottom: 15px;
-            color: #e60073;
-        }
-
-        main p {
-            line-height: 1.6;
+        p {
             font-size: 1.1rem;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
-
+        .btn {
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #ff85c1;
+        }
         footer {
-            margin-top: auto;
-            margin-top: 50px;
-            font-size: 0.9rem;
-            color: #ff66b2;
-            text-align: center;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #ff69b4;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Disneyland Paris</h1>
-        <p>Le rêve magique en rose</p>
-    </header>
 
-    <main>
-        <h2>Bienvenue à Disneyland Paris !</h2>
-        <p>Découvrez un monde féerique où la magie prend vie. Profitez des attractions, des spectacles et rencontrez vos personnages Disney préférés dans un décor rose et enchanteur.</p>
-    </main>
+<header>
+    <img src="https://upload.wikimedia.org/wikipedia/fr/0/03/Parc_Disneyland_Paris_logo.png" alt="Logo Disneyland Paris" />
+    <h1>Bienvenue à Disneyland Paris</h1>
+</header>
 
-    <footer>
-        &copy; 2025 Disneyland Paris - Tous droits réservés
-    </footer>
+<main>
+    <img src="https://i0.wp.com/www.elovoyage.com/wp-content/uploads/week-end-disneyland-paris-2-jours.jpg?fit=1800%2C1199&ssl=1" alt="Photo du parc Disneyland Paris" />
+    <p>Pour plus d'informations sur Disneyland Paris, découvrez toutes les attractions, événements et conseils pour préparer votre visite.</p>
+    <a href="infos.html" class="btn">En savoir plus</a>
+</main>
+
+<footer>
+    <a href="contact.html">Page de contact</a>
+</footer>
+
 </body>
 </html>
 
@@ -96,6 +96,7 @@
     </div>
 </body>
 </html>
+
 
 
 
