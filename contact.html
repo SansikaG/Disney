@@ -1,163 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact - Mon Site Rose</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
-
-    :root {
-      --rose-light: #ffe6ec;
-      --rose-medium: #f4a6ba;
-      --rose-dark: #c94c74;
-      --text-dark: #333;
-      --white: #fff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Raleway', sans-serif;
-      background: var(--rose-light);
-      color: var(--text-dark);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      background-color: var(--rose-medium);
-      color: var(--white);
-      text-align: center;
-      padding: 20px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      font-size: 2rem;
-    }
-
-    main {
-      flex: 1;
-      padding: 40px 20px;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    h2 {
-      color: var(--rose-dark);
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    label {
-      font-weight: 600;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      resize: vertical;
-    }
-
-    input:focus, textarea:focus {
-      border-color: var(--rose-dark);
-      outline: none;
-    }
-
-    button {
-      background: var(--rose-dark);
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background: #a63e5e;
-    }
-
-    .confirmation {
-      margin-top: 20px;
-      color: var(--rose-dark);
-      text-align: center;
-      font-weight: 600;
-      display: none;
-    }
-
-    footer {
-      background: var(--rose-medium);
-      color: var(--white);
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Disneyland Paris</title>
+    <style>
+        body {
+            background-color: #f8d7e3; /* rose clair */
+            font-family: Arial, sans-serif;
+            color: #4a0033;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header {
+            margin-bottom: 40px;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+        }
+        h1 {
+            margin-top: 10px;
+            font-size: 2.2rem;
+        }
+        form {
+            background-color: white;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ff69b4;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+        }
+        textarea {
+            min-height: 100px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #ff85c1;
+        }
+        footer {
+            margin-top: 40px;
+            color: #4a0033;
+            font-weight: 600;
+        }
+        a {
+            color: #ff69b4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Contact</h1>
-  </header>
+<header>
+    <img src="https://upload.wikimedia.org/wikipedia/fr/0/03/Parc_Disneyland_Paris_logo.png" alt="Logo Disneyland Paris" />
+    <h1>Contactez-nous</h1>
+</header>
 
-  <main>
-    <h2>Envoyez-moi un message</h2>
-    <form id="contactForm">
-      <label for="name">Nom</label>
-      <input type="text" id="name" name="name" required />
+<form>
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" placeholder="Votre nom" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" placeholder="Votre email" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" placeholder="Votre message" required></textarea>
 
-      <button type="submit">Envoyer</button>
-    </form>
-    <div class="confirmation" id="confirmationMessage">
-      Merci pour votre message, je vous répondrai rapidement !
-    </div>
-  </main>
+    <button type="submit">Envoyer</button>
+</form>
 
-  <footer>
-    &copy; 2025 Mon Site Rose. Tous droits réservés.
-  </footer>
-
-  <script>
-    // Simulation d'envoi (pas de backend ici)
-    const form = document.getElementById('contactForm');
-    const confirmation = document.getElementById('confirmationMessage');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault(); // Empêche l'envoi réel
-
-      // Ici tu pourrais utiliser fetch() pour envoyer les données à un serveur
-
-      form.reset();
-      confirmation.style.display = 'block';
-
-      setTimeout(() => {
-        confirmation.style.display = 'none';
-      }, 5000);
-    });
-  </script>
+<footer>
+    <p><a href="index.html">Retour à l'accueil</a></p>
+</footer>
 
 </body>
 </html>
-
