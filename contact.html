@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Site Rose Élégant</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Mon Site Rose</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
 
@@ -19,60 +19,87 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Raleway', sans-serif;
       background: var(--rose-light);
       color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
       background-color: var(--rose-medium);
       color: var(--white);
-      padding: 20px 0;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--rose-dark);
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 600px;
       margin: auto;
     }
 
-    section h2 {
+    h2 {
       color: var(--rose-dark);
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 20px;
       text-align: center;
     }
 
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--rose-dark);
+      outline: none;
+    }
+
+    button {
+      background: var(--rose-dark);
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #a63e5e;
+    }
+
+    .confirmation {
+      margin-top: 20px;
+      color: var(--rose-dark);
       text-align: center;
+      font-weight: 600;
+      display: none;
     }
 
     footer {
@@ -80,83 +107,54 @@
       color: var(--white);
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
-    }
-
-    /* Animation au scroll */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 8px;
-      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Mon Site Rose</h1>
-    <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#apropos">À propos</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Contact</h1>
   </header>
 
-  <section id="accueil" class="fade-in">
-    <h2>Bienvenue</h2>
-    <p>Bienvenue sur mon site web élégant et rose. Ici, vous trouverez toutes les informations importantes sur mes services, mon parcours, et comment me contacter.</p>
-  </section>
+  <main>
+    <h2>Envoyez-moi un message</h2>
+    <form id="contactForm">
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" required />
 
-  <section id="apropos" class="fade-in">
-    <h2>À propos</h2>
-    <p>Je suis une personne passionnée par le design, le web, et la communication. Mon objectif est de créer des expériences en ligne belles, accessibles et efficaces.</p>
-  </section>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
 
-  <section id="services" class="fade-in">
-    <h2>Services</h2>
-    <p>Je propose des services variés : design graphique, création de sites web, conseil en identité visuelle et accompagnement digital.</p>
-  </section>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-  <section id="contact" class="fade-in">
-    <h2>Contact</h2>
-    <p>Envie de collaborer ou de me poser une question ? Envoyez-moi un message à : <br><strong>contact@example.com</strong></p>
-  </section>
+      <button type="submit">Envoyer</button>
+    </form>
+    <div class="confirmation" id="confirmationMessage">
+      Merci pour votre message, je vous répondrai rapidement !
+    </div>
+  </main>
 
   <footer>
     &copy; 2025 Mon Site Rose. Tous droits réservés.
   </footer>
 
   <script>
-    // Animation des sections au scroll
-    const sections = document.querySelectorAll('.fade-in');
+    // Simulation d'envoi (pas de backend ici)
+    const form = document.getElementById('contactForm');
+    const confirmation = document.getElementById('confirmationMessage');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Empêche l'envoi réel
 
-    sections.forEach(section => {
-      observer.observe(section);
+      // Ici tu pourrais utiliser fetch() pour envoyer les données à un serveur
+
+      form.reset();
+      confirmation.style.display = 'block';
+
+      setTimeout(() => {
+        confirmation.style.display = 'none';
+      }, 5000);
     });
   </script>
 
